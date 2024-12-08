@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "cs50-python-personal"
+version = "0.0.1"
+description = "My personal cs50 python working space"
+authors = ["MauroGuar"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+cs50 = "^9.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
