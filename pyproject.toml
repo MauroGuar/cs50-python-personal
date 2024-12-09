@@ -6,6 +6,7 @@ authors = ["MauroGuar"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
+# Actual Python Version: 3.12.7
 python = "^3.12"
 cs50 = "^9.4.0"
 
