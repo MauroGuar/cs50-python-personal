@@ -2,17 +2,6 @@ from sys import exit
 from cs50 import get_string
 
 
-def check_luhn_algorithm(card_number: str) -> bool:
-    counter = 0
-    for i in reversed(range(0, len(card_number), 2)):
-        number = int(card_number[i]) * 2
-        counter += number if number < 10 else (number // 10 + number % 10)
-
-    for i in reversed(range(1, len(card_number), 2)):
-        counter += int(card_number[i])
-    return True if counter != 0 and counter % 10 == 0 else False
-
-
 def main():
     while True:
         card_number = get_string("Card Number: ")
@@ -31,6 +20,19 @@ def main():
         print("VISA")
     else:
         print("INVALID")
+
+
+def check_luhn_algorithm(card_number: str) -> bool:
+    counter = 0
+    for i in reversed(range(0, len(card_number), 2)):
+        number = int(card_number[i]) * 2
+        counter += number if number < 10 else (number // 10 + number % 10)
+
+    for i in reversed(range(1, len(card_number), 2)):
+        counter += int(card_number[i])
+    return True if counter != 0 and counter % 10 == 0 else False
+
+
 
 
 if __name__ == "__main__":
